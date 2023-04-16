@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dafuweng.dao.SalesmanRepresentativeCustomerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dafuweng.entity.SalesmanRepresentativeCustomer">
+        <id column="id" property="id" />
+        <result column="salesman_id" property="salesmanId" />
+        <result column="customer_id" property="customerId" />
+        <result column="contract_no" property="contractNo" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, salesman_id, customer_id, contract_no, create_time, update_time
+    </sql>
+
+    <!-- 根据销售代表id查询销售代表和客户的映射表 -->
+    <select id="getAllSalesmanCustomerMapperBySalesmanId" resultType="com.dafuweng.entity.SalesmanRepresentativeCustomer" parameterType="java.lang.Long">
+        select * from salesman_representative_customer where salesman_id = #{salesman_id}
+    </select>
+</mapper>

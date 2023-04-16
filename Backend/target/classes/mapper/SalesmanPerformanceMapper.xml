@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dafuweng.dao.SalesmanPerformanceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dafuweng.entity.SalesmanPerformance">
+        <id column="salesman_id" property="salesmanId" />
+        <result column="contract_amount" property="contractAmount" />
+        <result column="contract_customers" property="contractCustomers" />
+        <result column="loan_amount" property="loanAmount" />
+        <result column="service_fee" property="serviceFee"/>
+        <result column="call_times" property="callTimes" />
+        <result column="valid_calls" property="validCalls" />
+        <result column="intention_customers" property="intentionCustomers" />
+        <result column="interview_customers" property="interviewCustomers" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        salesman_id, contract_amount, contract_customers, loan_amount,service_fee, call_times, valid_calls, intention_customers, interview_customers, create_time, update_time
+    </sql>
+
+</mapper>

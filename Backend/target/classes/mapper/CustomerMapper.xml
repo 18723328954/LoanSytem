@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dafuweng.dao.CustomerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dafuweng.entity.Customer">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="id_card" property="idCard"/>
+        <result column="company_name" property="companyName"/>
+        <result column="business_license" property="businessLicense"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="intension_score" property="intensionScore"/>
+        <result column="salesman_id" property="salesmanId"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, id_card, company_name, business_license, create_time, update_time, intension_score,salesman_id
+    </sql>
+
+</mapper>
